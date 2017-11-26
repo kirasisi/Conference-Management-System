@@ -1,0 +1,83 @@
+﻿@model cms.Models.Paper
+
+@{
+    ViewBag.Title = "PaperDeatils";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Paper Details</h2>
+
+<div>
+    <h4>Paper</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Topic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Topic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.No__of_review)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No__of_review)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.final)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.final)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Conference.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conference.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+  
+    @Html.ActionLink("Back to List", "Index")
+</p>

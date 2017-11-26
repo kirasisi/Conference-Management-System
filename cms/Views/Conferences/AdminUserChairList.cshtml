@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<cms.Models.AspNetUser>
+
+@{
+    ViewBag.Title = "Review";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User</h2>
+
+<table id="table" class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UserEdit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "UserDetails", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "UserDelete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

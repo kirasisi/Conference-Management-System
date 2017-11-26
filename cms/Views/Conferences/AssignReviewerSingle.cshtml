@@ -1,0 +1,44 @@
+﻿@model IEnumerable<cms.Models.AspNetUser>
+
+@{
+    ViewBag.Title = "AssignReviewerSingle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AssignReviewerSingle</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table id ="table" class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expert)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Expert)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Assign", "assign", new { Id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

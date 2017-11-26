@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="40d8f20e2447439f97406ca836f96926" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="Model.AspNetRole" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUser" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AssignPaper" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Conference" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Paper" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Review" Width="1.5" PointX="9.75" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_AssignPaper_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Conference_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Paper_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Review_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_AssignPaper_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Paper_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Review_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

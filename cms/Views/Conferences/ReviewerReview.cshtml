@@ -1,0 +1,50 @@
+﻿
+@model IEnumerable<cms.Models.Review>
+
+@{
+    ViewBag.Title = "My Review";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>My Review</h2>
+<table id="table" class="table">
+    <thead>
+        <tr>
+            <th>Paper</th>
+            <th>Title</th>
+      
+            <th>Rating</th>
+            <th>Author</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paper.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paper.AspNetUser.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Details", "DetailsReview", new { id = item.Id }) |
+                    @Html.ActionLink("Edit", "ReviewerEditReview", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

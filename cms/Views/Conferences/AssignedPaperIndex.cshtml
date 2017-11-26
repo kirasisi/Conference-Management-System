@@ -1,0 +1,41 @@
+﻿@model IEnumerable<cms.Models.AssignPaper>
+
+@{
+    ViewBag.Title = "AssignedPaper";
+}
+
+<h2>Assigned Paper</h2>
+
+<table id="table" class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Topic</th>
+            <th>Author</th>
+            <th>Conference</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                  @Html.DisplayFor(modelItem => item.Paper.Title)                        
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paper.Topic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paper.AspNetUser.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paper.Conference.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "AssignedPaperDetails", new { id = item.Paper.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
